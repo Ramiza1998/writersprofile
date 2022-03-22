@@ -28,6 +28,17 @@
     box-shadow: 3px 2px 3px silver;
     transition: all 0.3s ease-in-out;
   }
+  .card ::content{
+height: 300px
+
+  }
+  .biowrap{
+    color: whitesmoke;
+    margin: 15px;
+    text-align: justify;
+  }
+
+
   .card:hover{
     transform: scale(1.03);
     box-shadow: 5px 5px 10px whitesmoke;
@@ -54,9 +65,9 @@
   .actionBtn{
       width: 90%;
       margin: auto;
+      color: #2c1203;
       font-size: 18px;
       padding: 5px 0;
-      margin: 5px 0;
       margin: 5px 0;
       text-transform: uppercase;
       outline: none;
@@ -64,3 +75,8 @@
       border-radius: 3px;
       transform: all 0.35 ease;
   }
+
+
+  
+
+

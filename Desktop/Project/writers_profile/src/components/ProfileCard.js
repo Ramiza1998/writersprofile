@@ -1,9 +1,9 @@
 import React from 'react'
 
-function PrpofileCard(writer) {
+function ProfileCard({writer}) {
   return (
     <div className='card'>
-    <img src= {Image/${writer.avatar}.png }
+    <img src= {`images/${writer.avatar}.png`}
     height="3000px" width="300px" alt={writer.img}/>
 
     <div className='textGroup'>
@@ -11,7 +11,7 @@ function PrpofileCard(writer) {
     <p>{writer.email}</p>
     <p>{writer.phone}</p>
 
-    <botton className='actionBtn'
+    <botton className='actionBtn'>Read Bio</botton>
 
 
 
@@ -22,4 +22,4 @@ function PrpofileCard(writer) {
   )
 }
 
-export default PrpofileCard
+export default ProfileCard;
