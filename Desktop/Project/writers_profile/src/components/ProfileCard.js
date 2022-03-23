@@ -1,17 +1,31 @@
 import React from 'react'
+import {useState} from "react"
 
 function ProfileCard({writer}) {
-  return (
-    <div className='card'>
-    <img src= {`images/${writer.avatar}.png`}
-    height="3000px" width="300px" alt={writer.img}/>
+  const [showBio, setShowBio] = useState(false);
 
-    <div className='textGroup'>
-    <h3>{writer.name}</h3>
-    <p>{writer.email}</p>
-    <p>{writer.phone}</p>
+  const handleClick = (bioData) =>{
+  setShowBio(showBio);
+};
+return(
+  <div className='card'>
+  <div className='card content'>
+  {showBio ? (
+  <div className='biowrap'>
+  <p className='bio'>{writer.bio}</p>
+  </div>
+   ):(
+      <img src= {`images/${writer.avatar}.png`}
+  height ="300px" width="300px" alt={writer.img}/>
+)}
+</div>
 
-    <botton className='actionBtn'>Read Bio</botton>
+  <div className='textGroup'>
+  <h3>{writer.name}</h3>
+  <p>{writer.email}</p>
+  <p>{writer.phone}</p>
+
+    <botton className='actionBtn' onClick={()=>handleClick(writer.bio)}>Read Bio</botton>
 
 
 
@@ -20,6 +34,6 @@ function ProfileCard({writer}) {
 
 
   )
-}
+   }
 
 export default ProfileCard;
